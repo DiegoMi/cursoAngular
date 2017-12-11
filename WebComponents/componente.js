@@ -2,12 +2,13 @@ class AppSample extends HTMLElement {
     constructor() {
         super();
         console.log("Creando el componente");
-        document.querySelector("#tp1");
-        // const oImport = ;
-        // const oElem = oImport.querySelector("#tp1");
+        
+        const oImport = 
+        document.querySelector('link[rel="import"]').import;
+        const oElem = oImport.querySelector("#tp1");
         this.attachShadow({mode: "open"})
-            .innerHTML = "<h1>Componente 1</h1>";
-            // .innerHTML = oElem;
+            // .innerHTML = "<h1>Componente 1</h1>";
+            .innerHTML = oElem.innerHTML;
     }
 }
 
